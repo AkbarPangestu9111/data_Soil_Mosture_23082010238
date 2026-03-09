@@ -1,1 +1,9 @@
-# data_Soil_Mosture_23082010238
+<img width="845" height="362" alt="image" src="https://github.com/user-attachments/assets/36353d1a-f326-486f-b0ff-7be23afc91fb" />
+<img width="334" height="223" alt="image" src="https://github.com/user-attachments/assets/e9047da9-3262-49e3-9ea1-1e3390130669" />
+
+intepretasi hasil:
+Accuracy bernilai 1.0000, yang mengindikasikan tidak ditemukan nilai yang hilang (missing values) dalam dataset. Hal ini sesuai dengan definisi *Accuracy = 1 - (missing/total)*, di mana missing adalah jumlah sel kosong dan total adalah jumlah baris. Karena tidak ada sel kosong, maka akurasi mencapai nilai maksimum.
+
+Completeness menunjukkan angka 11.0000. Angka ini perlu dipahami dalam konteks perhitungan yang digunakan. Dalam kode, Completeness dihitung sebagai (jumlah sel tidak null) / (jumlah baris). Karena dataset dibaca dengan parameter index_col=0, kolom pertama (misalnya year) dijadikan sebagai indeks, sehingga jumlah kolom data yang tersisa adalah 11. Seluruh sel pada 11 kolom tersebut terisi penuh (tidak ada null), sehingga total sel tidak null = 11 × jumlah baris. Dengan demikian, completeness = (11 × jumlah baris) / jumlah baris = 11. Angka ini merepresentasikan rata-rata jumlah kolom yang terisi per baris, bukan proporsi terhadap total sel. Jika dikehendaki proporsi, seharusnya penyebutnya adalah total seluruh sel (baris × kolom), yang akan menghasilkan nilai 1. Namun sesuai definisi yang diberikan dalam tugas, completeness dihitung dengan rumus tersebut, sehingga hasil 11.0000 menunjukkan bahwa setiap baris memiliki data lengkap pada 11 kolom.
+
+Timeliness bernilai 1.0000, artinya seluruh data berada dalam rentang 30 hari terakhir dihitung dari tanggal terakhir dalam dataset. Hal ini bisa terjadi karena rentang waktu keseluruhan data memang kurang dari atau sama dengan 30 hari, sehingga semua baris termasuk dalam kategori "recent".
